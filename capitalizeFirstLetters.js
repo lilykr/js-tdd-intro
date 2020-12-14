@@ -2,14 +2,9 @@
 const assert = require('assert');
 
 function capitalizeFirstLetters(string) {
-  if (string.length > 0) {
-    const arr = string.split(' ');
-    const newArr = arr.map(e => e[0].toUpperCase() + e.slice(1));
-    return newArr.join(' ')
-  }
-
-  else return '';
-
+  return string.length > 0 ?
+  string.split(' ').map(e => e[0].toUpperCase() + e.slice(1)).join(' ')
+  : '';
 }
 
 // Check that capitalizeFirstLetters is a function
