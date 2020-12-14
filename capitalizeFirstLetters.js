@@ -1,7 +1,16 @@
 // capitalizeFirstLetters.js
 const assert = require('assert');
 
-// WRITE THE ACTUAL FUNCTION HERE
+function capitalizeFirstLetters(string) {
+  if (string.length > 0) {
+    const arr = string.split(' ');
+    const newArr = arr.map(e => e[0].toUpperCase() + e.slice(1));
+    return newArr.join(' ')
+  }
+
+  else return '';
+
+}
 
 // Check that capitalizeFirstLetters is a function
 assert.strictEqual(typeof capitalizeFirstLetters, 'function');
@@ -13,7 +22,7 @@ assert.strictEqual(capitalizeFirstLetters.length, 1);
 assert.strictEqual(capitalizeFirstLetters('i am bold'), 'I Am Bold');
 
 // Check that it works for a 1-character string
-assert.strictEqual(capitalizeFirst('z'), 'Z');
+assert.strictEqual(capitalizeFirstLetters('z'), 'Z');
 
 // Check that it works for an empty string
-assert.strictEqual(capitalizeFirst(''), '');
+assert.strictEqual(capitalizeFirstLetters(''), '');
